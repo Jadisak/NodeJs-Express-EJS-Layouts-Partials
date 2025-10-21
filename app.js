@@ -3,7 +3,7 @@ const express = require('express')
 const expressLayouts = require('express-ejs-layouts')
 
 const app = express()
-const port = 3005
+const port = 3000
 
 // Static Files
 app.use(express.static('public'))
@@ -27,5 +27,5 @@ app.get('/info', (req, res) => {
     res.render('info', { title: 'Info Page', layout: './layouts/sidebar' })
 })
 
-// Listen on Port 5000
+// Listen on Port 3006
 app.listen(port, () => console.info(`App listening on port ${port}`))
