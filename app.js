@@ -19,8 +19,12 @@ app.get('', (req, res) => {
     res.render('index', { title: 'Home Page'})
 })
 
-app.get('/about', (req, res) => {
-    res.render('about', { title: 'About Page', layout: './layouts/sidebar' })
+app.get('/services', (req, res) => {
+    res.render('services', { title: 'Services Page', layout: './layouts/sidebar' })
+})
+
+app.get('/info', (req, res) => {
+    res.render('info', { title: 'Info Page', layout: './layouts/sidebar' })
 })
 
 // Listen on Port 5000

@@ -7,21 +7,34 @@
     <link rel="stylesheet" href="css/main.css">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="flex-1">
 
-    <div class="wrapper">
+    <div class="text-xl max-w-6xl mx-auto font-thin px-4">
+        <div class="max-w-6xlx h-fit bg-black mx-auto">
+            <%- include('../partials/header.ejs') %>
+        </div>
 
-        <%- include('../partials/header.ejs') %>
-
-        <div class="layout-sidebar">
-            <main><%- body %></main>
-            <side>Sidebar</side>
+        <div class="shadow-lg bg-green-50">
+            <div class="grid md:grid-cols-6 md:gap-0">
+                <div class="md:col-span-4 px-4 py-6 bg-gray-200">
+                    <main><%- body %></main>
+                </div>
+                <side class="w-full col-span-2">
+                    <div class="relative px-4">
+                        <div class="w-16 h-1 bg-amber-500 absolute top-0"></div>
+                        <p class="pt-6 pr-4 text-base">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, quas labore repudiandae exercitationem laudantium, delectus tenetur sequi maxime eius fugiat dolorum ipsam repellendus perferendis, praesentium aut! Ipsam fugit delectus dignissimos magni, dolores soluta pariatur nulla aliquam eligendi doloremque accusamus vitae id deserunt deleniti. Eius aliquid, consectetur qui eum architecto ratione impedit sit sunt esse ab facere ea eveniet repellendus.
+                        </p>
+                        <p class="my-8 p-6 shadow-lg text-amber-600 text-xl text-center bg-white font-semi-bold">
+                            Consectetur provident ducimus inventore reiciendis nesciunt sit nihil!
+                        </p>
+                    </div>
+                </side>
+            </div>
         </div>
 
         <%- include('../partials/footer.ejs') %>
-
+        
     </div>
-
-
 </body>
 </html>
